@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrative Panel</title>
+  <link rel="stylesheet" href="/styles/admin/adminRootStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    a{
+      text-decoration: none;
+      border: 1px solid rgb(0, 0, 0);
+      padding: -2px;
+      background-color: darkslategrey;
+      color: aliceblue;
+      border-radius: 5px;
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Administrative Panel</h1>
+  </header>
+  <div class="nav">
+      <form action="/admin/logout" method="POST">
+        <div class="btn-container">
+            <button class="btn" id="logout-btn" name="logout" type="submit">Logout</button>
+        </div>
+      </form>
+    </div>
+  <div class="container">
+    <div class="card">
+      <h2>Teachers</h2>
+      <p>Add teacher information</p>
+      <a href="./manageTeacher">Go to Add Teachers</a>
+    </div>
+    <div class="card">
+      <h2>Academic Calendar</h2>
+      <p>Manage academic events</p>
+      <a href="./academicCalendar">Go to Academic Calendar</a>
+    </div>
+    <div class="card">
+      <h2>Class Routine</h2>
+      <p>Manage class schedules</p>
+      <a href="./routine">Go to Class Routine</a>
+    </div>
+    <div class="card">
+      <h2>Teacher's Information</h2>
+      <p>All Teachers</p>
+      <a href="./allTeachers">See All Teachers</a>
+    </div>
+  </div>
+</body>
+</html>

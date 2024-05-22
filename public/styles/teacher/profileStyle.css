@@ -1,0 +1,145 @@
+     /* Reset CSS */
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Main Styles */
+    body {
+        background-color: whitesmoke;
+        color: black;
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+
+    .container, header {
+        max-width: 1015px;
+        margin: 20px auto;
+        padding: 30px;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+      }
+    header {
+        background-color: darkslategrey;
+        color:white;
+        text-align: center;
+        box-shadow: darkslategrey;
+        padding: 20px 30px 20px 30px;
+      }
+    
+    
+    h1{
+        color: white;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+    
+
+    .btn-container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: #2f4f4f;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background-color: rgb(226, 231, 231);
+        color: rgb(12, 6, 4);
+    }
+
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .info-section {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .about-section,
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    .about-section h2,
+    .contact-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #050303;
+    }
+
+    .about-section p,
+    .contact-info p {
+        font-size: 18px;
+        color: #4b4848;
+        margin-bottom: 10px;
+    }
+
+    .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid darkslategrey;
+    }
+
+    .profile-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .nav {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .btn-container {
+            margin-top: 10px;
+        }
+
+        .main-content {
+            padding: 10px;
+        }
+
+        .info-section {
+            flex: 1;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .profile-info h2,
+        .profile-info p,
+        .about-section h2,
+        .about-section p,
+        .contact-info h2,
+        .contact-info p {
+            font-size: 16px;
+        }
+
+        .image-section {
+            flex: 1;
+        }
+
+        .profile-img {
+            max-height: 200px;
+        }
+    }

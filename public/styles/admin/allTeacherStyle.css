@@ -1,0 +1,146 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Teacher Table Styles */
+.teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.teacher-table th, .teacher-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+
+.option i {
+    margin-right: 5px;
+}
+
+
+/* .option:hover {
+    /* color: #333; */
+    /* color: green; */
+/* } */ 
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .teacher-table th, .teacher-table td {
+        padding: 10px;
+    }
+
+    .teacher-table img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
+
+/* CSS */
+.option {
+  background-color: darkslategray;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  /* margin-right: 10px; */
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.option:hover {
+  background-color: #356060;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.authID {
+    width: 110px;
+}
+.options {
+    width: 230px;
+}
+.phone {
+    width: 100px;
+}
+.name {
+    width: 300px
+}
+.designation {
+    width : 150px
+}
+.email {
+    width: 250px;
+}

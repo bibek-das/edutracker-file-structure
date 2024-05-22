@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styles/teacher/profileStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+      </header>
+    <div class="container">
+    <div class="nav">
+        <div class="btn-container">
+            <a href="./classlog/{{teacher._id}}"><button class="btn" id="classlog" name="classlog">Class Log</button></a>
+            <form action="/teachers/logout" method="POST">
+            <button class="btn" id="logout-btn" name="logout-btn" href="">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="info-section">
+            <div class="about-section">
+                <h2>About</h2>
+                <p><strong>Full Name:</strong> {{teacher.name}} </p>
+                <p><strong>ID:</strong> {{teacher.authID}}</p>
+                <p><strong>Designation:</strong> {{teacher.designation}}</p>
+                <p><strong>Department:</strong> {{dept.deptFullName}}</p>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-envelope"></i> {{teacher.email}}</p>
+                <p><i class="fas fa-phone"></i> {{teacher.phone}}</p>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="data:{{contentType}};base64, {{teacher.imageBase64}}" />
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

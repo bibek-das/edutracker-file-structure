@@ -1,0 +1,135 @@
+
+:root {
+    --primary-color: #1e3c72;
+    --secondary-color: #2a5298;
+    --background-color: #f8f8f8;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --accent-color: #555;
+    --white: #fff;
+    --light-gray: #ccc;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --hover-box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none !important;
+
+}
+
+.navbar {
+    background-color: #2f4f4f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 20px;
+}
+
+.search-input {
+    padding: 5px 30px 5px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #402195;
+}
+
+.owner-name {
+    margin-right: 20px;
+}
+
+header {
+    background-color: darkslategrey;
+    color:white;
+    max-width: 1030px;
+    text-align: center;
+    box-shadow: darkslategrey;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 10px;
+  }
+  
+h1{
+    color: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+
+  .container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.option:hover {
+    background-color: #356060;
+    color: white;
+}
+
+th {
+    background-color: darkslategrey;
+    color: white;
+}
+
+#home {
+    margin-left: 420px;
+}
+#teachername {
+    margin-right: 420px;
+}
+

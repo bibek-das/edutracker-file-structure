@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Log</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/teacher/classlog.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="../{{teacher._id}}" class="nav-item" id="home">Home</a>
+        </div>
+        <div class="navbar-right">
+            <span class="owner-name" id="teachername">{{teacher.name}}</span>
+        </div>
+    </nav>
+      <header>
+        <h1>Class Log</h1>
+      </header>
+    </div>
+    <div class="container">
+      <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>course</th>
+                <th>Batch</th>
+                <th>Section</th>
+                <th>Room</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each classLog}}
+            <tr>
+                <td>{{date}}</td>
+                <td>{{startTime}}</td>
+                <td>{{endTime}}</td>
+                <td>{{course}}</td>
+                <td>{{batch}}</td>
+                <td>{{section}}</td>
+                <td>{{room}}</td>
+                <td class="options">
+                    <button class="option"><i class="fas fa-check"></i> Class Scheduled</button><br>
+                    <button class="option"><i class="fas fa-ban"></i> Cancel Class</button><br>
+                    {{!-- <button class="option"><i class="fas fa-calendar-alt"></i> Reschedule</button> --}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

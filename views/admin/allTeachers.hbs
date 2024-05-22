@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Teachers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel = "stylesheet" href="/styles/admin/allTeacherStyle.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>All Teachers List</h1>
+
+    {{!-- CSE --}}
+    <table class="teacher-table">
+        <thead>
+        <h1>CSE</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "CSE")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+    {{!-- EEE --}}
+    <table class="teacher-table">
+        <thead>
+        <h1>EEE</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "EEE")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+
+    {{!-- Sofware --}}
+
+    <table class="teacher-table">
+        <thead>
+        <h1>SWE</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "SWE")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+
+    {{!-- BBA --}}
+
+    <table class="teacher-table">
+        <thead>
+        <h1>BBA</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "BBA")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+
+    {{!-- LLB --}}
+
+    <table class="teacher-table">
+        <thead>
+        <h1>LLB</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "LLB")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+
+    {{!-- English --}}
+
+    <table class="teacher-table">
+        <thead>
+        <h1>ENG</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "ENG")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+
+    {{!-- Economics --}}
+
+    <table class="teacher-table">
+        <thead>
+        <h1>ECO</h1>
+        <tr>
+            <th class="authID">ID</th>
+            <th class="name">Name</th>
+            <th class="designation">Designation</th>
+            <th class="email">Email</th>
+            <th class="phone">Phone</th>
+            <th class="options">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each teachers}}
+            {{#if (eq department "ECO")}}
+            <tr>
+              <td class="authID">{{authID}}</td>
+              <td class="name">{{name}}</td>
+              <td class="designation">{{designation}}</td>
+              <td class="email">{{email}}</td>
+              <td class="phone">{{phone}}</td>
+              <td class="options">
+                <button class="option"><a href="./api/teacher/{{this._id}}">Visit Profile</a></button>
+                <button class="option">Visit Log</button>
+              </td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

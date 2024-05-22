@@ -1,0 +1,125 @@
+body {
+    background-color: whitesmoke;
+    color: black;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /*  Login Form  */
+  
+   
+    .container, header, form {
+      max-width: 800px;
+      margin: 15px auto;
+      padding: 40px 15px 40px 15px;
+      background-color: white;
+      box-shadow: var(--box-shadow);
+      border-radius: 10px;
+    }
+  
+     /* NAVBAR */
+     .content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+     }
+  
+    header{
+      background-color: darkslategrey;
+      color:white;
+      text-align: center;
+      box-shadow: darkslategrey;
+      padding: 15px 15px;
+    }
+    
+     h2 {
+      margin-bottom: 50px;
+      color: rgb(70, 55, 30);
+      text-align: center;
+    }
+    
+    .form-group {
+      /* display: flex; */
+      margin-bottom: 30px ;
+      width: 50%;
+      /* margin-left: 30%; */
+      /* justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: left; */
+    }
+    
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: rgb(70, 55, 30);
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      
+      border: 1px solid rgb(205, 205, 204);
+      border-radius: 3px;
+      box-shadow:  0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    button {
+      width: 30%;
+      padding: 10px;
+      background-color: #cdd4d4;
+      /* background-color: rgb(150, 180, 115); */
+      font-size: 15px;
+      background-color: #2f4f4f;
+      color: #fff;
+      border: solid rgb(70, 55, 30);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    button:hover {
+      /* background-color: rgb(250, 240, 205); */
+      background-color: #fff;
+      color: #000;
+    }
+  
+  
+    .password-toggle-icon {
+      float: right;
+      margin-left: -25px;
+      margin-top: -28px;
+      position: relative;
+      z-index: 2;
+      /* transform: translateY(-50%); */
+      cursor: pointer;
+    }
+  
+    /* .password-toggle-icon {
+      margin-left: 23rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+    } */
+    #submit-btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .password-toggle-icon i {
+      font-size: 16px;
+      line-height: 1;
+      color: #848897;
+      transition: color 0.3s ease-in-out;
+      margin-bottom: 20px;
+    }
+    
+    .password-toggle-icon i:hover {
+      color: #848897
+    }
+    
+  

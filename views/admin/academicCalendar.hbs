@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Calendar</title>
+  <link rel="stylesheet" href="/styles/admin/adminRootStyle.css">
+</head>
+<body>
+  <header>
+    <h1>Academic Calendar</h1>
+  </header>
+  <div class="container">
+    <form action="/admin/academicCalendar" method="post">
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <label for="event">Event:</label>
+      <textarea id="event" name="event" required></textarea><br><br>
+      <input type="submit">
+      {{#if msg}}
+        <p style="color: darkslategrey;">{{msg}}</p>
+      {{/if}}
+    </form>
+  </div>
+</body>
+</html>
