@@ -189,7 +189,8 @@ exports.addTeacher = (req, res , next) => {
 
 exports.visitTeacherProfile = async (req, res) => {
   const teacher = await Teacher.findById(req.params.id);
-  res.render('./teachers/teacherProfile', { teacher });
+  const dept = await Department.findOne({deptName: teacher.department})
+  res.render('./teachers/teacherProfile', { teacher, dept });
 }
 
 exports.addRoutine = async (req, res) => {
@@ -356,7 +357,17 @@ exports.updateRoutine = async (req, res) => {
       return;
     }
   }
-  const updateData = req.body;
+  const updateData = {
+    day: req.body.day,
+    startTime: req.body.startTimeHours + ":" + req.body.startTimeMinutes + " " + req.body.startTimePeriod,
+    endTime: req.body.endTimeHours + ":" + req.body.endTimeMinutes + " " + req.body.endTimePeriod,
+    batch: req.body.batch,
+    section: req.body.section,
+    course: req.body.course,
+    teacher: req.body.teacher,
+    room: req.body.room,
+  };
+  console.log(updateData);
   await Routine.findByIdAndUpdate(id, updateData, {new:true});
   //schedule need to be updated
   res.redirect(".");

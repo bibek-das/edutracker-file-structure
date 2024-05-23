@@ -37,6 +37,9 @@ const scheduleSchema = new mongoose.Schema({
     classContent:{
         type: String,
     },
+    reason:{
+        type: String,
+    }
 });
 
 const Schedule = new mongoose.model("schedule", scheduleSchema);

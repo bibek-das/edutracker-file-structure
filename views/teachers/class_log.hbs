@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Log</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/teacher/classlog.css">
     
 </head>
@@ -22,10 +23,55 @@
       </header>
     </div>
     <div class="container">
+        {{#each classLog}}
+        {{#if (orEq status "ongoing" "waiting")}}
+        <table>
+        <thead>
+            <tr>
+                <th>Date <br> <sub>(YYYY-MM-DD)</sub></th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>course</th>
+                <th>Batch</th>
+                <th>Section</th>
+                <th>Room</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{date}} <br> {{day}}</td>
+                <td>{{startTime}}</td>
+                <td>{{endTime}}</td>
+                <td>{{course}}</td>
+                <td>{{batch}}</td>
+                <td>{{section}}</td>
+                <td>{{room}}</td>
+                {{#if (eq status "ongoing")}}
+                <td class="options">
+                    <p style="color: green;"><i class="fa fa-hourglass-2"></i> Ongoing </p>
+                </td>
+                {{/if}}
+                {{#if (eq status "waiting")}}
+                <td class="options">
+                    <p style="color: rgb(214, 214, 6);"><i class="fa fa-hourglass-2"></i> Waiting </p>
+                </td>
+                {{/if}}
+            </tr>
+        </tbody>
+    </table>
+    {{#if (eq status "waiting")}}
+        <form action="./{{_id}}" method="POST">
+            <textarea type="text" id="classContent" name="classContent" placeholder="Enter contents of the class"></textarea><br>
+            <button class="option" type="submit">Mark Attended</button>
+        </form>
+        {{/if}}
+    {{/if}}
+    {{/each}}
       <table>
         <thead>
             <tr>
-                <th>Date</th>
+                <th>Date <br> <sub>(YYYY-MM-DD)</sub></th>
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>course</th>
@@ -37,22 +83,37 @@
         </thead>
         <tbody>
             {{#each classLog}}
+            {{#if (notEq status "ongoing" "waiting")}}
             <tr>
-                <td>{{date}}</td>
+                <td>{{date}} <br> {{day}}</td>
                 <td>{{startTime}}</td>
                 <td>{{endTime}}</td>
                 <td>{{course}}</td>
                 <td>{{batch}}</td>
                 <td>{{section}}</td>
                 <td>{{room}}</td>
+                {{#if (eq status "upcoming")}}
                 <td class="options">
-                    <button class="option"><i class="fas fa-check"></i> Class Scheduled</button><br>
-                    <button class="option"><i class="fas fa-ban"></i> Cancel Class</button><br>
+                    <p style="color: rgb(26, 25, 25);"><i class="fa fa-hourglass-2"></i> Upcoming </p><br>
+                    <button onclick="cancelClass(`{{_id}}`)" class="option"><i class="fas fa-ban"></i> Cancel Class</button><br>
                     {{!-- <button class="option"><i class="fas fa-calendar-alt"></i> Reschedule</button> --}}
                 </td>
+                {{/if}}
+                {{#if (eq status "attended")}}
+                <td class="options">
+                    <p style="color: green;"> Attended </p>
+                    <p>classContent: {{classContent}}</p>
+                    {{!-- <button class="option"><i class="fas fa-calendar-alt"></i> Reschedule</button> --}}
+                </td>
+                {{/if}}
+                {{#if (eq status "canceled")}}
+                <td style="color: red;">Canceled. <br> {{reason}} </td>
+                {{/if}}
             </tr>
+            {{/if}}
             {{/each}}
         </tbody>
     </table>
+    <script src="/scripts/teacher/classLog.js"></script>
 </body>
 </html>
