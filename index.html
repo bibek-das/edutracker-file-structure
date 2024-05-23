@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Class</title>
+    <!-- Include Font Awesome for the icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <button id="cancelClassButton" class="option"><i class="fas fa-ban"></i> Cancel Class</button>
+
+    <script>
+        document.getElementById('cancelClassButton').addEventListener('click', async () => {
+            const reason = prompt("Are you sure you want to cancel the class? If yes, please write the reason.");
+
+            if (reason) {
+                const response = await fetch('/cancel-class', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ reason })
+                });
+
+                if (response.ok) {
+                    alert('Class canceled successfully.');
+                } else {
+                    alert('Failed to cancel the class.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
